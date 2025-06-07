@@ -1,0 +1,252 @@
+:root {
+  --white: #ffffff;
+  --black: #0d0d0d;
+  --primary: #ee6515;
+  --gray: #5a5a5a;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jost", "Arial", sans-serif;
+  color: var(--white);
+}
+
+body {
+  background-color: var(--black);
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding: 64px;
+}
+
+/* NAVBAR */
+.navbar {
+  width: 100%;
+  height: 8vh;
+  background: transparent;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 64px;
+}
+.navbar .logo img {
+  width: 100px;
+}
+.hero .hero-content container img {
+  width: 150px;
+}
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 32px;
+}
+.nav-links a {
+  text-decoration: none;
+  color: var(--white);
+  font-weight: 500;
+  transition: color 0.3s;
+}
+.nav-links a:hover {
+  color: var(--primary);
+}
+.register-btn {
+  padding: 8px 16px;
+  background: var(--primary);
+  color: var(--white);
+  border-radius: 4px;
+  transition: background 0.3s;
+}
+.register-btn:hover {
+  background: var(--gray);
+}
+
+/* HERO SECTION */
+.hero {
+  position: relative;
+  height: 70vh;
+  background: url("title.jpg") no-repeat center center/cover;
+}
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+}
+.hero-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.hero-content .tagline {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+.hero-content .date-location {
+  font-size: 1.2rem;
+}
+
+/* ABOUT SECTION */
+.about {
+  padding: 40px 0;
+  text-align: center;
+}
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.about p {
+  font-size: 1.1rem;
+  line-height: 1.5;
+}
+
+/* SPEAKERS SECTION */
+.speakers {
+  padding: 40px 0;
+  text-align: center;
+}
+.speakers h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.speakers-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+.speaker {
+  background: var(--gray);
+  padding: 20px;
+  border-radius: 8px;
+  width: 300px;
+  text-align: center;
+}
+.speaker img {
+  width: 100%;
+  border-radius: 50%;
+  margin-bottom: 10px;
+}
+.speaker h3 {
+  font-size: 1.5rem;
+  margin-bottom: 5px;
+}
+
+/* VENUE SECTION */
+.venue {
+  padding: 40px 0;
+}
+.venue h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.venue-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+}
+.venue-images,
+.venue-details {
+  flex: 1;
+  min-width: 300px;
+}
+.venue-images img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.venue-details h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+
+/* SCHEDULE SECTION */
+.schedule {
+  padding: 40px 0;
+  background: var(--gray);
+}
+.schedule h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.schedule-list {
+  list-style: none;
+  max-width: 600px;
+  margin: auto;
+}
+.schedule-list li {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--white);
+}
+.schedule-list .time {
+  font-weight: 700;
+}
+.schedule-list .event {
+  flex: 1;
+  margin-left: 20px;
+}
+
+/* REGISTRATION SECTION */
+.registration {
+  padding: 40px 0;
+  text-align: center;
+  background: var(--black);
+}
+.registration h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+.registration p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+}
+.registration .register-btn {
+  font-size: 1.2rem;
+  padding: 10px 20px;
+}
+
+/* FOOTER */
+.footer {
+  background: var(--black);
+  padding: 20px 0;
+  text-align: center;
+  border-top: 1px solid var(--gray);
+}
+.footer a {
+  color: var(--primary);
+  text-decoration: none;
+}
+
+/* RESPONSIVE MEDIA QUERIES */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    padding: 20px;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .hero-content h1 {
+    font-size: 2.5rem;
+  }
+}
